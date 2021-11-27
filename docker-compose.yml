@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  postgres-container:
+    image: postgres:12
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: qwerty
+      POSTGRES_USER: user
+
+
